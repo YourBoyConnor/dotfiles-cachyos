@@ -1,0 +1,13 @@
+ascii-image-converter-git
+cursor-bin
+displaylink
+evdi-dkms
+flameshot-git
+linux-wallpaperengine-git
+neohtop
+oh-my-posh
+plymouth-theme-deus-ex-git
+sddm-astronaut-theme
+sddm-sugar-dark
+sddm-theme-corners-git
+wttrbar
