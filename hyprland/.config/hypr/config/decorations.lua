@@ -1,4 +1,7 @@
 -- Look and feel configuration
+local ok, nc = pcall(require, "noctalia_colors")
+local ACTIVE   = ok and nc.active   or CACHYLBLUE
+local INACTIVE = ok and nc.inactive or CACHYGRAY
 
 hl.config({
     general = {
@@ -9,10 +12,10 @@ hl.config({
         resize_on_border = true,
         col = {
             active_border = {
-                colors = { CACHYLGREEN, CACHYDGREEN },
+                colors = { ACTIVE, ACTIVE },
                 angle = 45,
             },
-            inactive_border = CACHYGRAY,
+            inactive_border = INACTIVE,
         },
     },
     group = {

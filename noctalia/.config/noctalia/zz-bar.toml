@@ -49,3 +49,8 @@ widget_spacing = 4
 type = "sysmon"
 stat = "cpu_temp"
 show_value = false
+
+[theme.templates.user.hypr_colors]
+input_path  = "$XDG_CONFIG_HOME/noctalia/templates/hypr-colors.lua"
+output_path = "$XDG_CONFIG_HOME/hypr/noctalia_colors.lua"
+post_hook   = "hyprctl reload"

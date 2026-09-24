@@ -1,0 +1,10 @@
+id          = "cpymm/tempf"
+name        = "CPU Temp F"
+version     = "1.0.0"
+plugin_api  = 3
+author      = "cpymm"
+description = "CPU temperature in Fahrenheit."
+
+[[widget]]
+id    = "tempf"
+entry = "widget.luau"
