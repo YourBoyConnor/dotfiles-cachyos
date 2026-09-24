@@ -6,7 +6,7 @@ margin_edge = 0
 capsule = true
 capsule_radius = 12
 capsule_fill = "surface_variant"
-start  = ["launcher", "workspaces", "weather", "ram", "cpu", "temp"]
+start  = ["launcher", "workspaces", "weather", "ram", "cpu", "group:g2"]
 center = []
 end    = ["battery", "group:g1", "network", "notifications", "tray", "control-center", "session"]
 
@@ -30,10 +30,8 @@ type = "sysmon"
 stat = "cpu_usage"
 show_value = true
 
-[widget.temp]
-type = "sysmon"
-stat = "cpu_temp"
-show_value = true
+[widget.cputemp]
+type = "cpymm/tempf:tempf"
 
 [system.monitor]
 cpu_temp_sensor_path = "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input"
@@ -41,3 +39,13 @@ cpu_temp_sensor_path = "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_inpu
 [location]
 auto_locate = false
 address = "Washington, DC"
+
+[[bar.default.capsule_group]]
+id = "g2"
+members = ["tempgauge", "cputemp"]
+widget_spacing = 4
+
+[widget.tempgauge]
+type = "sysmon"
+stat = "cpu_temp"
+show_value = false
