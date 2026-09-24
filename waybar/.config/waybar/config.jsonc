@@ -9,8 +9,7 @@
     "custom/launcher",
     "hyprland/workspaces",
     "custom/weather",
-    "custom/updates",
-    "custom/cava"
+    "custom/updates"
   ],
   
   "modules-center": [
@@ -27,7 +26,6 @@
     "backlight",
     "pulseaudio",
     "network",
-    "custom/vpn",
     "clock",
     "custom/notification",
     "tray"

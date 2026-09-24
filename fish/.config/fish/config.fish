@@ -54,11 +54,8 @@ alias myip="curl ifconfig.me"
 alias ports="netstat -tulanp"
 
 # Plymouth theme management
-alias plymouth_theme_list="~/bin/plymouth_theme.sh list"
-alias plymouth_theme_set="~/bin/plymouth_theme.sh set"
 
 # SDDM theme management
-alias sddm_theme="~/bin/sddm_theme.sh"
 
 # =========
 # FUNCTIONS
@@ -83,7 +80,7 @@ function pack
     end
 end
 
-neofetch
+fastfetch
 
 # oh-my-posh custom prompt
 oh-my-posh init fish --config $HOME/.config/ohmyposh/config.json | source

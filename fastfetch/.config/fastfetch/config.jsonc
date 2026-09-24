@@ -73,16 +73,6 @@
       "key": "  ",
       "keyColor": "34"
     },
-    {
-      "type": "custom",
-      "format": "  󰊤  GitHub : Zilero232",
-      "keyColor": "\u001b[38;5;75m"
-    },
-    {
-      "type": "battery",
-      "key": "   Battery",
-      "keyColor": "38;5;228" // Light Yellow
-    },
     "break",
     {
       "type": "title",

@@ -9,13 +9,13 @@ check_command() {
 }
 
 check_command checkupdates
-check_command yay
+check_command paru
 
 # Get official repo updates
 OFFICIAL=$(checkupdates 2>/dev/null | wc -l)
 
 # Get AUR updates
-AUR=$(yay -Qua 2>/dev/null | wc -l)
+AUR=$(paru -Qua 2>/dev/null | wc -l)
 
 # Calculate total updates
 TOTAL=$((OFFICIAL + AUR))
