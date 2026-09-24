@@ -41,7 +41,7 @@
             "branch_template": "{{ trunc 25 .Branch }}"
           },
           "style": "powerline",
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \u00b7 {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \u00b7 staged {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \u00b7 stash {{ .StashCount }}{{ end }} ",
+          "template": " {{ .HEAD }} ",
           "trailing_diamond": "\ue0b4",
           "type": "git"
         },
