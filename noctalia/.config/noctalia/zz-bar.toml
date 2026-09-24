@@ -1,0 +1,43 @@
+[bar.default]
+position = "top"
+thickness = 34
+margin_ends = 8
+margin_edge = 0
+capsule = true
+capsule_radius = 12
+capsule_fill = "surface_variant"
+start  = ["launcher", "workspaces", "weather", "ram", "cpu", "temp"]
+center = []
+end    = ["battery", "group:g1", "network", "notifications", "tray", "control-center", "session"]
+
+[[bar.default.capsule_group]]
+id = "g1"
+members = ["clock", "bluetooth", "volume", "brightness", "screenshot", "keyboard_layout"]
+accordion = true
+accordion_direction = "start"
+
+[weather]
+enabled = true
+unit = "imperial"
+
+[widget.ram]
+type = "sysmon"
+stat = "ram_pct"
+show_value = true
+
+[widget.cpu]
+type = "sysmon"
+stat = "cpu_usage"
+show_value = true
+
+[widget.temp]
+type = "sysmon"
+stat = "cpu_temp"
+show_value = true
+
+[system.monitor]
+cpu_temp_sensor_path = "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input"
+
+[location]
+auto_locate = false
+address = "Washington, DC"

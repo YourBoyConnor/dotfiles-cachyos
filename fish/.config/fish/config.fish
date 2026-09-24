@@ -80,7 +80,7 @@ function pack
     end
 end
 
-fastfetch
+fastfetch --logo none --logo-padding-left 0 --logo-padding-top 0
 
 # oh-my-posh custom prompt
 oh-my-posh init fish --config $HOME/.config/ohmyposh/config.json | source
