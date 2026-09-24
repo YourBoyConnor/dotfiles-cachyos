@@ -2,7 +2,8 @@
 [general]
 import = [
     "/home/cpymm/.config/alacritty/themes/kanagawa_wave.toml",
-    "/home/cpymm/.config/alacritty/keybindings.toml"
+    "/home/cpymm/.config/alacritty/keybindings.toml",
+    "~/.config/alacritty/themes/noctalia.toml",
 ]
 
 [env]

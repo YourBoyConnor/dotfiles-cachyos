@@ -1,0 +1,17 @@
+{
+  "group/tools": {"orientation": "inherit", "drawer": {"transition-duration": 250, "transition-left-to-right": false}, "modules": ["clock", "bluetooth", "backlight", "pulseaudio", "custom/screenshot", "hyprland/language"]},
+  "bluetooth": {
+    "format": "󰂯",
+    "format-off": "󰂲",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱 {num_connections}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "on-click": "blueman-manager"
+  },
+  "custom/screenshot": {
+    "format": "󰹑",
+    "tooltip": false,
+    "on-click": "flameshot gui"
+  }
+}

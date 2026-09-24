@@ -57,11 +57,11 @@
 
   // Memory / CPU / Temp
   "memory": {
-    "format": " {: >3}%",
+    "format": " {}%",
     "on-click": "alacritty -e btop"
   },
   "cpu": {
-    "format": "󰘚 {usage: >3}%",
+    "format": "󰘚 {usage}%",
     "on-click": "alacritty -e btop"
   },
   "temperature": {
@@ -89,7 +89,7 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon} {capacity: >3}%",
+    "format": "{icon} {capacity}%",
     "format-icons": ["", "", "", "", ""]
   },
 
@@ -112,7 +112,7 @@
 
   // Backlight
   "backlight": {
-    "format": "{icon} {percent: >3}%",
+    "format": "{icon} {percent}%",
     "format-icons": ["", ""],
     "on-scroll-down": "brightnessctl set 5%-",
     "on-scroll-up": "brightnessctl set +5%"
@@ -121,8 +121,8 @@
   // Audio
   "pulseaudio": {
     "scroll-step": 1,
-    "format": "{icon} {volume: >3}%",
-    "format-bluetooth": "{icon} {volume: >3}%",
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
     "format-muted": " muted",
     "format-icons": {
       "headphones": "",
@@ -140,8 +140,9 @@
 
   // Network
   "network": {
+    "on-click": "nm-connection-editor",
     "format": "{ifname}",
-    "format-wifi": " {essid} ({signalStrength}%)",
+    "format-wifi": "󰤨 {signalStrength}%",
     "format-ethernet": "  {ifname}",
     "format-disconnected": "Disconnected ⚠",
     "tooltip-format": " {ifname} via {gwaddri}",
@@ -210,8 +211,8 @@
   // Tray
   "tray": {
     "icon-size": 20,
-    "spacing": 10,
-    "show-passive-items": true,
+    "spacing": 6,
+    "show-passive-items": false,
     "reverse-direction": false,
     "smooth-scrolling-threshold": 1.0
   }

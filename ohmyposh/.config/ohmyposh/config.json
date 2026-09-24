@@ -41,7 +41,7 @@
             "branch_template": "{{ trunc 25 .Branch }}"
           },
           "style": "powerline",
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \u00b7 {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \u00b7 staged {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \u00b7 stash {{ .StashCount }}{{ end }} ",
           "trailing_diamond": "\ue0b4",
           "type": "git"
         },
@@ -185,9 +185,9 @@
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
           "options": {
-            "charged_icon": "\ue22f ",
-            "charging_icon": "\ue234 ",
-            "discharging_icon": "\ue231 "
+            "charged_icon": "\uf240 ",
+            "charging_icon": "\uf0e7 ",
+            "discharging_icon": "\uf242 "
           },
           "style": "powerline",
           "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}\uf295 ",
@@ -201,7 +201,10 @@
           "style": "diamond",
           "template": " {{ .CurrentDate | date .Format }} ",
           "trailing_diamond": "\ue0b4",
-          "type": "time"
+          "type": "time",
+          "options": {
+            "time_format": "3:04 PM"
+          }
         }
       ],
       "type": "rprompt"

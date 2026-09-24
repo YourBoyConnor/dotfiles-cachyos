@@ -52,13 +52,13 @@ tooltip label {
 #workspaces {
 	background: @background-primary;
 	padding: 4px;
-	margin: 6px 2px;
+	margin: 3px 2px;
 	border-radius: 12px;
 	border: 2px solid @border-color;
 }
 
 #workspaces button {
-	padding: 6px 10px;
+	padding: 3px 8px;
 	margin: 0 2px;
 	background: @background-primary;
 	color: @subtext0;
@@ -100,7 +100,7 @@ tooltip label {
 #window {
 	background: @background-secondary;
 	color: @text;
-	padding: 8px 16px;
+	padding: 3px 10px;
 	border-radius: 12px;
 	border: 1px solid @border-color;
 	font-weight: 500;
@@ -114,8 +114,8 @@ tooltip label {
 	background: @blue;
 	color: @base;
 	font-weight: bold;
-	margin: 6px 2px 6px 2px;
-	padding: 8px 12px;
+	margin: 3px 2px 3px 2px;
+	padding: 3px 8px;
 	border-radius: 12px;
 	font-size: 15px;
 }
@@ -129,16 +129,16 @@ tooltip label {
 	color: @green;
 	border-left: 4px solid @green;
 	border-radius: 12px 0 0 12px;
-	margin: 6px 0;
-	padding: 8px 12px;
+	margin: 3px 0;
+	padding: 3px 8px;
 }
 
 #cpu {
 	background: @background-primary;
 	color: @blue;
 	border-left: 4px solid @blue;
-	margin: 6px 0px 6px 0;
-	padding: 8px 12px;
+	margin: 3px 0px 3px 0;
+	padding: 3px 8px;
 }
 
 #temperature {
@@ -146,8 +146,8 @@ tooltip label {
 	color: @teal;
 	border-left: 4px solid @teal;
 	border-radius: 0 12px 12px 0;
-	margin: 6px 2px 6px 0;
-	padding: 8px 12px;
+	margin: 3px 2px 3px 0;
+	padding: 3px 8px;
 }
 
 #temperature.critical {
@@ -164,8 +164,8 @@ tooltip label {
 	background: @background-primary;
 	color: @green;
 	border-left: 4px solid @green;
-	margin: 6px 2px;
-	padding: 8px 12px;
+	margin: 3px 2px;
+	padding: 3px 8px;
 	border-radius: 12px;
 }
 
@@ -195,8 +195,8 @@ tooltip label {
 	color: @yellow;
 	border-left: 4px solid @yellow;
 	border-radius: 12px 0 0 12px;
-	margin: 6px 0 6px 2px;
-	padding: 8px 12px;
+	margin: 3px 0 3px 2px;
+	padding: 3px 8px;
 }
 
 #pulseaudio {
@@ -204,8 +204,8 @@ tooltip label {
 	color: @yellow;
 	border-left: 4px solid @yellow;
 	border-radius: 0 12px 12px 0;
-	margin: 6px 2px 6px 0;
-	padding: 8px 12px;
+	margin: 3px 2px 3px 0;
+	padding: 3px 8px;
 }
 
 #pulseaudio.muted {
@@ -217,12 +217,14 @@ tooltip label {
 * Network
 * -------------------------------------------------------------------------- */
 
-#network {
+#network,
+#bluetooth,
+#custom-screenshot {
 	background: @background-primary;
 	color: @green;
 	border-left: 4px solid @green;
-	margin: 6px 2px;
-	padding: 8px 12px;
+	margin: 3px 2px;
+	padding: 3px 8px;
 	border-radius: 12px;
 }
 
@@ -231,7 +233,9 @@ tooltip label {
 	border-left: 4px solid @error;
 }
 
-#network.disabled {
+#network.disabled,
+#bluetooth.off,
+#bluetooth.disabled {
 	color: @subtext0;
 	border-left: 4px solid @subtext0;
 }
@@ -244,8 +248,8 @@ tooltip label {
 	background: @background-primary;
 	color: @mauve;
 	border-left: 4px solid @mauve;
-	margin: 6px 0 6px 2px;
-	padding: 8px 12px;
+	margin: 3px 0 3px 2px;
+	padding: 3px 8px;
 	border-radius: 12px 0 0 12px;
 }
 
@@ -253,8 +257,8 @@ tooltip label {
 	background: @background-primary;
 	color: @mauve;
 	border-left: 4px solid @mauve;
-	margin: 6px 2px 6px 0;
-	padding: 8px 12px;
+	margin: 3px 2px 3px 0;
+	padding: 3px 8px;
 	border-radius: 0 12px 12px 0;
 }
 
@@ -267,7 +271,7 @@ tooltip label {
 	color: @base;
 	font-size: 16px;
 	font-weight: bold;
-	margin: 6px 2px 6px 8px;
+	margin: 3px 2px 3px 8px;
 	padding: 8px 14px 8px 10px;
 	border-radius: 12px;
 	border: 2px solid @pink;
@@ -277,8 +281,8 @@ tooltip label {
 	background: @background-primary;
 	color: @blue;
 	border-left: 4px solid @blue;
-	margin: 6px 2px;
-	padding: 8px 12px;
+	margin: 3px 2px;
+	padding: 3px 8px;
 	border-radius: 12px;
 }
 
@@ -286,8 +290,8 @@ tooltip label {
 	background: @background-primary;
 	color: @yellow;
 	border-left: 4px solid @yellow;
-	margin: 6px 2px;
-	padding: 8px 12px;
+	margin: 3px 2px;
+	padding: 3px 8px;
 	border-radius: 12px;
 }
 
@@ -301,8 +305,8 @@ tooltip label {
 	background: @background-primary;
 	color: @teal;
 	border-left: 4px solid @teal;
-	margin: 6px 2px;
-	padding: 8px 12px;
+	margin: 3px 2px;
+	padding: 3px 8px;
 	border-radius: 12px;
 }
 
@@ -315,8 +319,8 @@ tooltip label {
 	background: @background-primary;
 	color: @lavender;
 	border-left: 4px solid @lavender;
-	margin: 6px 2px;
-	padding: 8px 12px;
+	margin: 3px 2px;
+	padding: 3px 8px;
 	border-radius: 12px;
 }
 
@@ -324,8 +328,8 @@ tooltip label {
 	background: @background-primary;
 	color: @green;
 	border-left: 4px solid @green;
-	margin: 6px 2px;
-	padding: 8px 12px;
+	margin: 3px 2px;
+	padding: 3px 8px;
 	border-radius: 12px;
 }
 
@@ -335,8 +339,8 @@ tooltip label {
 
 #tray {
 	background: @background-secondary;
-	padding: 6px 10px;
-	margin: 6px 8px 6px 2px;
+	padding: 3px 8px;
+	margin: 3px 8px 3px 2px;
 	border-radius: 12px;
 	border: 1px solid @border-color;
 }
@@ -359,8 +363,8 @@ tooltip label {
 	background: @background-primary;
 	color: @yellow;
 	border-left: 4px solid @yellow;
-	margin: 6px 2px;
-	padding: 8px 12px;
+	margin: 3px 2px;
+	padding: 3px 8px;
 	border-radius: 12px;
 }
 
@@ -374,8 +378,8 @@ tooltip label {
 	background: @warning;
 	color: @base;
 	font-weight: bold;
-	padding: 8px 16px;
-	margin: 6px 8px;
+	padding: 3px 10px;
+	margin: 3px 8px;
 	border-radius: 12px;
 }
 
@@ -390,6 +394,8 @@ tooltip label {
 #temperature:hover,
 #backlight:hover,
 #network:hover,
+#bluetooth:hover,
+#custom-screenshot:hover,
 #pulseaudio:hover,
 #custom-launcher:hover,
 #custom-notification:hover,
@@ -399,4 +405,55 @@ tooltip label {
 #language:hover,
 #custom-cava:hover {
 	opacity: 0.8;
+}
+/* --- matched launcher + workspaces --- */
+#custom-launcher {
+background: @background-primary;
+color: @mauve;
+font-size: 15px;
+border: none;
+border-left: 4px solid @mauve;
+margin: 3px 2px 3px 8px;
+padding: 3px 8px;
+border-radius: 12px;
+}
+
+#workspaces {
+background: @background-primary;
+border: none;
+border-left: 4px solid @mauve;
+margin: 3px 2px;
+padding: 0 4px;
+border-radius: 12px;
+}
+
+#workspaces button {
+background: transparent;
+border: none;
+margin: 2px 1px;
+padding: 0 6px;
+border-radius: 8px;
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+background: @mauve;
+color: @base;
+}
+
+#workspaces button.empty {
+background: transparent;
+}
+
+#tools #language {
+border-radius: 12px;
+border-right: none;
+margin: 3px 2px;
+}
+
+#workspaces button.active.empty,
+#workspaces button.focused.empty {
+background: @mauve;
+color: @base;
+opacity: 1;
 }
