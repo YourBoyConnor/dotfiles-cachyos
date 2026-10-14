@@ -1,0 +1,10 @@
+id = "cpymm/brightness"
+name = "DDC Brightness"
+version = "1.0.0"
+plugin_api = 3
+author = "cpymm"
+description = "Shows DDC brightness percent."
+
+[[widget]]
+id = "brightness"
+entry = "widget.luau"

@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# usage: brightness up|down
+state="$HOME/.cache/brightness"
+(
+  flock 8
+  pct=$(cat "$state" 2>/dev/null || echo 50)
+  if [ "$1" = up ]; then pct=$((pct + 10)); else pct=$((pct - 10)); fi
+  [ $pct -gt 100 ] && pct=100
+  [ $pct -lt 0 ] && pct=0
+  echo $pct > "$state"
+) 8>/tmp/brightness.state.lock
+exec 9>/tmp/brightness.worker.lock
+flock -n 9 || exit 0
+declare -A max=([3]=100 [5]=50)
+last=-1
+while true; do
+  pct=$(cat "$state")
+  [ "$pct" = "$last" ] && break
+  last=$pct
+  for b in 3 5; do
+    ddcutil --bus $b setvcp 10 $((pct * ${max[$b]} / 100)) --noverify --sleep-multiplier 0.1 2>/dev/null &
+  done
+  wait
+done
