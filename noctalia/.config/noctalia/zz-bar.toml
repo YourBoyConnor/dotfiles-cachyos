@@ -34,7 +34,7 @@ show_value = true
 type = "cpymm/tempf:tempf"
 
 [system.monitor]
-cpu_temp_sensor_path = "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input"
+cpu_temp_sensor_path = "/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input"
 
 [location]
 auto_locate = false
