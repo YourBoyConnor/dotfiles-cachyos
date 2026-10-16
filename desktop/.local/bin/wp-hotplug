@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+sock="$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock"
+state="$HOME/.cache/wp-hotplug"
+mkdir -p "$state"
+last=0
+
+snapshot() {
+  local pid args i out
+  for pid in $(pgrep -x linux-wallpaper); do
+    mapfile -d '' args < /proc/$pid/cmdline
+    out=""
+    for i in "${!args[@]}"; do
+      [ "${args[$i]}" = "--screen-root" ] && out="${args[$((i+1))]}"
+    done
+    [ -n "$out" ] || continue
+    readlink /proc/$pid/cwd > "$state/$out.cwd"
+    printf '%s\0' "${args[@]}" > "$state/$out.args"
+  done
+}
+
+restart_all() {
+  local f out args
+  for f in "$state"/*.args; do
+    [ -e "$f" ] || continue
+    out=$(basename "$f" .args)
+    pkill -9 -f "linux-wallpaperengine --screen-root $out "
+    sleep 1
+    mapfile -d '' args < "$f"
+    ( cd "$(cat "$state/$out.cwd")" && setsid "${args[@]}" >/dev/null 2>&1 & )
+  done
+}
+
+snapshot
+( while sleep 30; do snapshot; done ) &
+
+socat -U - UNIX-CONNECT:"$sock" | while read -r line; do
+  case "$line" in
+    monitoradded\>\>FALLBACK*) ;;
+    monitoradded\>\>*)
+      now=$(date +%s)
+      (( now - last < 8 )) && continue
+      last=$now
+      sleep 4
+      restart_all
+      ;;
+  esac
+done
